@@ -316,9 +316,146 @@ a {
     font-size: 1rem;
     color: #555;
 }
-/* Styling gambar di dalam card */
+
 .venue-card img {
     height: 200px;
     width: 100%;
     object-fit: cover;
 }
+
+/* SIGNIN PAGE */
+.logo {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 100px;
+    height: auto;
+}
+#signin {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(https://img.freepik.com/free-photo/close-up-recording-video-with-smartphone-concert-toned-picture_1153-6333.jpg?t=st=1727024174~exp=1727027774~hmac=828e4615759e90ad31df861b9249813974837733cd75cbfa1e3829682b2159be&w=740)
+            center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.signin-form {
+    background: rgba(0, 0, 0, 0.304);
+    color: white;
+    backdrop-filter: blur(10px);
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.form-control {
+    background-color: transparent;
+}
+.form-control ::placeholder {
+    color: white;
+}
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.submit-button,
+.daftar-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-button {
+    background-color: #4caf50;
+    color: #fff;
+}
+.daftar-button {
+    background-color: rgb(159, 43, 226);
+    color: #fff;
+}
+
+/* SIGNUP PAGE */
+#signup {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(https://img.freepik.com/free-photo/close-up-recording-video-with-smartphone-concert-toned-picture_1153-6333.jpg?t=st=1727024174~exp=1727027774~hmac=828e4615759e90ad31df861b9249813974837733cd75cbfa1e3829682b2159be&w=740)
+            center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-container {
+    background: rgba(0, 0, 0, 0.304);
+    color: white;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-container .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-container .form-group label {
+    font-size: 1rem;
+}
+
+.signup-container .form-control {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.signup-container .btn-signup {
+    background-color: rgb(107, 29, 180);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.signup-container .btn-signup:hover {
+    background-color: rgb(95, 24, 161);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: rgb(107, 29, 180);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+

@@ -18,7 +18,7 @@
     <div class="container-fluid head">
         <nav class="navbar navbar-expand-lg">
             <div class="container-xxl head2">
-                <a class="navbar-brand" href="index.html">Elefthéro</a>
+                <a class="navbar-brand" href="{{ route('home') }}">Elefthéro</a>
                 <img src="Assets/Elefthero bening.png" alt="Logo">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,20 +27,20 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item me-4">
-                            <a class="nav-link" href="{{ route('home') }}">Home</a>
+                            <a class="nav-link" href="/home">Home</a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link" href="{{ route('artist') }}"> Artists</a>
+                            <a class="nav-link" href="/artist"> Artists</a>
                         </li>
 
                         <li class="nav-item me-4">
-                            <a class="nav-link" href="{{ route('venue') }}">Venue</a>
+                            <a class="nav-link" href="/venue">Venue</a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
+                            <a class="nav-link" href="/pricing">Pricing</a>
                         </li>
                         <li class="nav-item me-4">
-                            {{-- <a class="nav-link" href="{{route('signin')}}">Sign In</a> --}}
+                            <a class="nav-link" href="/signin">Sign In</a>
                         </li>
                     </ul>
                 </div>

@@ -21,4 +21,12 @@ class PagesController extends Controller
     function pricing(){
         return view("paging/pricing");
     }
+
+    function signin(){
+        return view("login/signin");
+    }
+
+    function signup(){
+        return view("login/signup");
+    }
 }
