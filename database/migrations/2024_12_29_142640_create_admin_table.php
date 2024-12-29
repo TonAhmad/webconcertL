@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('artist', function (Blueprint $table) {
-            $table->id('artist_id');
-            $table->string('artist_name','255');
-            $table->string('genre','255');
-            $table->string('country','100');
-            $table->text('description');
-            $table->string('photo_name','255');
+        Schema::create('admin', function (Blueprint $table) {
+            $table->string('admin_id')->primary();
+            $table->string('username')->unique();
+            $table->string('password');
         });
     }
 
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('artist');
+        Schema::dropIfExists('admin');
     }
 };

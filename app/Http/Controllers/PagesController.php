@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artist;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -11,7 +12,11 @@ class PagesController extends Controller
     }
 
     function artist(){
-        return view("paging/artist");
+        // Ambil semua data artist dari database
+        $artists = Artist::all();
+
+        // Kirim data ke view 'artists.index'
+        return view('paging/artist', compact('artists'));
     }
 
     function venue(){

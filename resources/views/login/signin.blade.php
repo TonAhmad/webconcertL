@@ -4,7 +4,7 @@
         <section id="signin">
         <div class="container-sm ">
             <div class="logo">
-                <h2>Elefthéro</h2><a href="/"><img src="Assets/Elefthero bening.png"></a>
+                <h2>Elefthéro</h2><a href="/"><img src="{{asset ('images/Elefthero-bening.png')}}"></a>
             </div>
             <div class="signin-form">
                 <form action="" method="post">

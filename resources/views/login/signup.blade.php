@@ -21,7 +21,7 @@
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password">
                 </div>
-                <button type="submit" class="btn btn-signup" onclick="window.location.href='/'">Sign Up</button>
+                <button type="submit" class="btn btn-signup" onclick="window.location.href='/signin'">Sign Up</button>
                 <div class="login-link">
                     <p>Already have an account? <a href="/signin">Log In</a></p>
                 </div>
