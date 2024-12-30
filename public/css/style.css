@@ -407,7 +407,7 @@ input[type="password"] {
     justify-content: center;
     align-items: center;
 }
-.signup-container {
+.container-signup {
     background: rgba(0, 0, 0, 0.304);
     color: white;
     max-width: 500px;
@@ -419,25 +419,25 @@ input[type="password"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.signup-container h2 {
+.container-signup h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.signup-container .form-group {
+.container-signup .form-group {
     margin-bottom: 15px;
 }
 
-.signup-container .form-group label {
+.container-signup .form-group label {
     font-size: 1rem;
 }
 
-.signup-container .form-control {
+.container-signup .form-control {
     padding: 10px;
     font-size: 1rem;
 }
 
-.signup-container .btn-signup {
+.container-signup .btn-signup {
     background-color: rgb(107, 29, 180);
     color: #fff;
     width: 100%;
@@ -447,7 +447,7 @@ input[type="password"] {
     border-radius: 4px;
 }
 
-.signup-container .btn-signup:hover {
+.container-signup .btn-signup:hover {
     background-color: rgb(95, 24, 161);
 }
 

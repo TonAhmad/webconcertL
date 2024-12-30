@@ -12,10 +12,8 @@ class PagesController extends Controller
     }
 
     function artist(){
-        // Ambil semua data artist dari database
         $artists = Artist::all();
 
-        // Kirim data ke view 'artists.index'
         return view('paging/artist', compact('artists'));
     }
 
@@ -29,9 +27,5 @@ class PagesController extends Controller
 
     function signin(){
         return view("login/signin");
-    }
-
-    function signup(){
-        return view("login/signup");
     }
 }

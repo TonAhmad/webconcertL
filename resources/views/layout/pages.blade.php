@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="shortcut icon" href="{{asset ('images/Elefthero-bening.png')}}">
+    <link rel="shortcut icon" href="{{ asset('images/Elefthero-bening.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-xxl head2">
                 <a class="navbar-brand" href="{{ route('home') }}">Elefthéro</a>
-                <img src="{{asset ('images/Elefthero-bening.png')}}" alt="Logo">
+                <img src="{{ asset('images/Elefthero-bening.png') }}" alt="Logo">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,9 +39,20 @@
                         <li class="nav-item me-4">
                             <a class="nav-link" href="/pricing">Pricing</a>
                         </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="/signin">Sign In</a>
-                        </li>
+
+                        <!-- Cek apakah user sudah login -->
+                        @if (session('user'))
+                            <li class="nav-item me-4">
+                                <span class="nav-link">Welcome, {{ session('user')->user_name }}</span>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        @else
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="/signin">Sign In</a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -54,7 +65,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">
-                <img src="{{asset ('images/Elefthero-bening.png')}}" alt="Start Logo" class="logo">
+                <img src="{{ asset('images/Elefthero-bening.png') }}" alt="Start Logo" class="logo">
             </div>
             <div class="footer-info">
                 <p>&copy; Start, 2024 - All rights reserved.</p>

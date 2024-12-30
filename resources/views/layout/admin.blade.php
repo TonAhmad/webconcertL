@@ -10,25 +10,39 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Konser Admin</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Data Penjualan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Data Tiket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Log Aktivitas</a></li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Konser Admin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Data Penjualan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Data Tiket</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Log Aktivitas</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <!-- Jika admin login -->
+                @if(session('admin'))
+                    <li class="nav-item">
+                        <span class="nav-link">Welcome, {{ session('admin')->username }}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.logout') }}">Logout</a>
+                    </li>
+                @else
+                    <!-- Jika belum login -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.login') }}">Login</a>
+                    </li>
+                @endif
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
 @yield('admin')
 

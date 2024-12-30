@@ -1,7 +1,7 @@
 @extends('layout/admin')
 
 @section('admin')
-        <!-- Container -->
+    <!-- Container -->
     <div class="container mt-4">
         <h1 class="text-center text-dark-purple">Dashboard Admin</h1>
         <p class="text-center">Kelola data penjualan tiket konser Anda dengan mudah.</p>
