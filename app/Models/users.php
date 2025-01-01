@@ -10,19 +10,18 @@ class users extends Authenticatable
 {
     use HasFactory;
 
-    public $timestamps = false;
-    protected $table = 'user';
-    protected $primaryKey = 'user_id';
+    protected $table = 'user';  // Menyebutkan nama tabel yang digunakan
 
     protected $fillable = [
         'user_name',
         'phone',
         'email',
         'password',
-        'id_card',
+        'id_card'
     ];
 
     protected $hidden = [
         'password',
+        'remember_token',
     ];
 }

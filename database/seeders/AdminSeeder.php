@@ -31,7 +31,7 @@ class AdminSeeder extends Seeder
                 'password' => Hash::make('lutpicihuy'),
             ],
             [
-                'admin_id' => 'ADM004',
+                'admin_id' => 'SYSTEM',
                 'username' => 'SYSTEM',
                 'password' => Hash::make('SYSTEM'),
             ],

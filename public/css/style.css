@@ -3,6 +3,12 @@ a {
     text-decoration: none;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Navbar header background */
 .head,
 .head2 {
@@ -111,9 +117,11 @@ a {
     padding: 5px;
 }
 .card-img {
-    height: 180px;
     width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
+
 .card-title {
     padding-left: 10px;
     padding-top: 5px;
@@ -191,8 +199,9 @@ a {
     color: white;
     padding: 20px 0;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     z-index: 1;
+    margin-top: auto;
 }
 
 .container {
@@ -250,7 +259,7 @@ a {
     padding: 60px 0;
 }
 
-.artist h1{
+.artist h1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -465,3 +474,22 @@ input[type="password"] {
     text-decoration: underline;
 }
 
+/* ticket paege */
+.ticket-card {
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ticket-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    border-bottom: 2px solid #ddd;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}

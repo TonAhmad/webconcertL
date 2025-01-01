@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>elefthéro</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/Elefthero-bening.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -37,13 +37,14 @@
                             <a class="nav-link" href="/venue">Venue</a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link" href="/pricing">Pricing</a>
+                            <a class="nav-link" href="/ticket">Pricing</a>
                         </li>
 
                         <!-- Cek apakah user sudah login -->
                         @if (session('user'))
                             <li class="nav-item me-4">
-                                <span class="nav-link">Welcome, {{ session('user')->user_name }}</span>
+                                <a class="nav-link" href="{{ route('account') }}">Welcome,
+                                    {{ session('user')->user_name }}</a>
                             </li>
                             <li class="nav-item me-4">
                                 <a class="nav-link" href="/logout">Logout</a>
@@ -81,6 +82,8 @@
         </div>
     </footer>
 
+    <!-- Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">

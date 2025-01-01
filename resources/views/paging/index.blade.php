@@ -22,14 +22,14 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="Assets/eternal.jpg" class="d-block w-100" alt="...">
+                    <img src="{{asset ('images/eternal.jpg')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
                         <h2>Ariana Grande</h2>
                         <p>See her new album realesed</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="Assets/ANTI.png" class="d-block w-100" alt="...">
+                    <img src="{{asset ('images/ANTI.png')}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
                         <h2>Rihanna</h2>
                         <p>Album Anti out now!</p>
@@ -58,8 +58,8 @@
             <div class="row align-items-start grid gap-2">
                 <!-- card 1 -->
                 <div class="col">
-                    <div class="card " style="width: 18rem;">
-                        <img src="https://readdork.com/wp-content/uploads/2020/11/lany-oct20-59.jpg" class="card-img-top">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://readdork.com/wp-content/uploads/2020/11/lany-oct20-59.jpg" class="card-img">
                         <div class="card-body">
                             <h5 class="card-title">Lany</h5>
                             <a href="Arists/lany.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -74,7 +74,7 @@
                 <!-- card 2 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{asset ('images/Niki.2.jpg')}}" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Niki.2.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Niki</h5>
                             <a href="" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -89,7 +89,7 @@
                 <!-- card 3 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="Assets/Ariana.jpg" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Ariana.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Ariana Grande</h5>
                             <a href="Arists/ariana.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@
                 <!-- card 4 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="Assets/Summer.jpg" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Summer.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Summer</h5>
                             <a href="Arists/summer.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@
                 <!-- card 5 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="Assets/Justin.jpg" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Justin.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Justin Bieber</h5>
                             <a href="Arists/JB.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@
                 <!-- card 6 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="Assets/Afgan.jpg" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Afgan.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Afgan</h5>
                             <a href="Arists/Afgan.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@
                 <!-- card 7 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="Assets/Neighbour.jpg" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Neighbour.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">The Neighbourhood</h5>
                             <a href="Arists/neighbourhood.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@
                 <!-- card 8 -->
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="Assets/Nirvana.jpg" class="card-img-top" alt="...">
+                        <img src="{{asset ('images/Nirvana.jpg')}}" class="card-img" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Nirvana</h5>
                             <a href="Arists/nirvana.html" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@
             </div>
             <div class="buton">
                 <button type="button" class="btn btn-danger"
-                    onclick="window.location.href='Signup.html#form-daftar'">Register Now!</button>
+                    onclick="window.location.href='/signin/signup'">Register Now!</button>
             </div>
         </div>
     </section>

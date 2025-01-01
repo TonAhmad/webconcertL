@@ -7,7 +7,7 @@
                 <h2>Elefthéro</h2><a href="/"><img src="{{ asset('images/Elefthero-bening.png') }}"></a>
             </div>
             <div class="signin-form">
-                <form action="/pricing" method="post">
+                <form action="/ticket" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="email">Email</label>

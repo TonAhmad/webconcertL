@@ -43,10 +43,25 @@ class AdminController extends Controller
         ])->withInput();
     }
 
-    public function dashboard()
+    public function adminDashboard()
     {
-        return view('admin.dashboard');
+        // Query untuk data penjualan tiket
+        $salesData = DB::table('ticket')
+            ->join('concert', 'ticket.concert_id', '=', 'concert.concert_id')
+            ->join('transaction', 'ticket.ticket_id', '=', 'transaction.ticket_id')
+            ->select(
+                'concert.concert_name',
+                'ticket.category',
+                DB::raw('SUM(transaction.quantity) as total_sold'),
+                DB::raw('SUM(transaction.total_price) as total_revenue')
+            )
+            ->groupBy('concert.concert_name', 'ticket.category')
+            ->get();
+
+        return view('admin.dashboard', compact('salesData'));
     }
+
+
 
 
     // Logout admin
