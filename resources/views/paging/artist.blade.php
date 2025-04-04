@@ -7,7 +7,7 @@
             <h1 class="mb-4" style="color: black">Your favorite artists</h1>
             <div class="artists-container">
                 @foreach ($artists as $artist)
-                    <a href="#">
+                    <a href="/ticket">
                         <div class="artists-card">
                             <!-- Menampilkan foto -->
                             <img src="{{ asset('images/' . ($artist->photo_name ?? 'default.jpg')) }}" class="card-img-artist"

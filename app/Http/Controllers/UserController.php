@@ -120,7 +120,7 @@ class UserController extends Controller
     public function logout(Request $request)
     {
         $request->session()->forget('user');
-        $request->session()->flush(); // Bisa juga gunakan forget jika hanya session tertentu yang ingin dihapus
+        $request->session()->flush();
 
         return redirect()->route('home');
     }

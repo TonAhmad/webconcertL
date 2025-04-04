@@ -1,5 +1,9 @@
 @extends('layout/login')
-
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 @section('login')
     <section id="signin">
         <div class="container-sm ">

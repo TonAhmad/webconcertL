@@ -1,5 +1,10 @@
 @extends('layout/login')
-
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
 @section('login')
     <section id="signin">
         <div class="container-sm ">
@@ -30,10 +35,10 @@
                         @enderror
                     </div>
                     <div class="input-group d-flex justify-content-between">
-                        <div class="form-check">
+                        {{-- <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="remember-me" name="remember-me">
                             <label class="form-check-label" for="remember-me">Remember me!</label>
-                        </div>
+                        </div> --}}
                         <div>
                             <a href="/admin" class="text-danger">admin click here</a>
                         </div>

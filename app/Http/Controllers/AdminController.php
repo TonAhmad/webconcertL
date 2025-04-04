@@ -45,6 +45,12 @@ class AdminController extends Controller
 
     public function adminDashboard()
     {
+
+        // $user = session('admin');
+        // if (!$user || !isset($user->user_id)) {
+        //     return redirect('/admin')->with('error', 'Please log in to access your account.');
+        // }
+
         // Query untuk data penjualan tiket
         $salesData = DB::table('ticket')
             ->join('concert', 'ticket.concert_id', '=', 'concert.concert_id')

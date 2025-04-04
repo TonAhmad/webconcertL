@@ -1,6 +1,11 @@
 @extends('layout/pages')
 
 @section('isi')
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
     <section id="purchase-form">
         <div class="container-xxl py-4">
             <div class="row">

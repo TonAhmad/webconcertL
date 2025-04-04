@@ -12,14 +12,18 @@ class TicketController extends Controller
 
     public function showTickets()
     {
-        // Mengambil semua data tiket beserta relasi ke konser dan admin jika diperlukan
+
+        $admin = session('admin');
+        if (!$admin || !isset($admin->admin_id)) {
+            return redirect('/admin')->with('error', 'Admin session not found. Please login to access');
+        }
+
         $tickets = DB::table('ticket')
             ->join('concert', 'ticket.concert_id', '=', 'concert.concert_id')
             ->join('admin', 'ticket.admin_id', '=', 'admin.admin_id')
             ->select('ticket.*', 'concert.concert_name', 'admin.username')
             ->get();
 
-        // Kirim data tiket ke view
         return view('admin.ticket', compact('tickets'));
     }
 
@@ -32,6 +36,12 @@ class TicketController extends Controller
     // Menambah tiket ke database menggunakan Stored Procedure
     public function addTicket(Request $request)
     {
+
+        $admin = session('admin');
+        if (!$admin || !isset($admin->admin_id)) {
+            return redirect('/admin')->with('error', 'Admin session not found. Please login to access');
+        }
+
         $validated = $request->validate([
             'concert_id' => 'required|integer|exists:concert,concert_id',
             'category' => 'required|in:Regular,VIP,VVIP',
@@ -83,7 +93,7 @@ class TicketController extends Controller
         // Ambil admin_id dari sesi (pastikan admin tersedia di sesi)
         $admin = session('admin');
         if (!$admin || !isset($admin->admin_id)) {
-            return redirect()->back()->with('error', 'Admin session not found.');
+            return redirect('/admin')->with('error', 'Admin session not found. Please login to access');
         }
         $admin_id = $admin->admin_id;
 
@@ -164,7 +174,7 @@ class TicketController extends Controller
     {
         $user = session('user');
         if (!$user || !isset($user->user_id)) {
-            return back()->with('error', 'User session not found.');
+            return redirect('/signin')->with('error', 'User session not found. please login first');
         }
         $user_id = $user->user_id;
 

@@ -12,7 +12,7 @@
                         <div class="venue-card-body">
                             <h5 class="card-title">Gelora Bung Karno (GBK)</h5>
                             <p class="card-text">Jakarta, Indonesia</p>
-                            <a href="formbeli.html" class="btn btn-primary">See More</a>
+                            <a href="/ticket" class="btn btn-primary">See More</a>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                         <div class="venue-card-body">
                             <h5 class="venue-card-title">Jakarta International Stadium (JIS)</h5>
                             <p class="venue-card-text">Jakarta, Indonesia</p>
-                            <a href="formbeli.html" class="btn btn-primary">See More</a>
+                            <a href="/ticket" class="btn btn-primary">See More</a>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <div class="card-body">
                             <h5 class="venue-card-title">Istora Senayan</h5>
                             <p class="venue-card-text">Jakarta, Indonesia</p>
-                            <a href="formbeli.html" class="btn btn-primary">See More</a>
+                            <a href="/ticket" class="btn btn-primary">See More</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="venue-card-body">
                             <h5 class="venue-card-title">The Kasablanka Hall</h5>
                             <p class="venue-card-text">Jakarta, Indonesia</p>
-                            <a href="formbeli.html" class="btn btn-primary">See More</a>
+                            <a href="/ticket" class="btn btn-primary">See More</a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         <div class="venue-card-body">
                             <h5 class="venue-card-title">The O2 Arena</h5>
                             <p class="venue-card-text">London, United Kingdom</p>
-                            <a href="formbeli.html" class="btn btn-primary">See More</a>
+                            <a href="/ticket" class="btn btn-primary">See More</a>
                         </div>
                     </div>
                 </div>
