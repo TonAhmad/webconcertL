@@ -456,18 +456,24 @@ DELIMITER ;
 
 ### Recommended Indexes
 
+**Catatan**: Beberapa indexes sudah otomatis dibuat oleh foreign key constraints di migrations. 
+Indexes berikut adalah tambahan untuk meningkatkan performance query tertentu.
+
 ```sql
--- Index untuk pencarian tiket berdasarkan konser
-CREATE INDEX idx_ticket_concert ON ticket(concert_id);
+-- Index untuk pencarian tiket berdasarkan konser (sudah ada dari FK)
+-- CREATE INDEX idx_ticket_concert ON ticket(concert_id);
 
--- Index untuk pencarian transaksi berdasarkan user
-CREATE INDEX idx_transaction_user ON transaction(user_id);
+-- Index untuk pencarian transaksi berdasarkan user (sudah ada dari FK)
+-- CREATE INDEX idx_transaction_user ON transaction(user_id);
 
--- Index untuk pencarian konser berdasarkan tanggal
+-- Index tambahan untuk pencarian konser berdasarkan tanggal (perlu ditambahkan manual)
 CREATE INDEX idx_concert_date ON concert(date);
 
--- Index untuk pencarian berdasarkan email
-CREATE INDEX idx_user_email ON user(email);
+-- Index untuk pencarian berdasarkan email (sudah ada dari UNIQUE constraint)
+-- CREATE INDEX idx_user_email ON user(email);
+
+-- Index tambahan untuk filter kategori tiket (perlu ditambahkan manual)
+CREATE INDEX idx_ticket_category ON ticket(category);
 ```
 
 ---

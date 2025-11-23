@@ -260,6 +260,12 @@ MAIL_FROM_ADDRESS=noreply@webconcertl.com
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
+**⚠️ Catatan Keamanan untuk Gmail**:
+- Gunakan App Password, bukan password akun utama
+- Aktifkan 2-Factor Authentication di akun Gmail
+- Jangan commit file `.env` ke repository
+- Simpan kredensial dengan aman menggunakan environment variables atau secret manager
+
 ### Queue Configuration
 Untuk menggunakan queue system:
 ```env

@@ -102,7 +102,11 @@ Email: user@example.com
 Password: password
 ```
 
-**PENTING**: Ganti password default ini setelah instalasi!
+**⚠️ PERINGATAN KEAMANAN**: 
+- Kredensial ini HANYA untuk development/testing
+- WAJIB ganti semua password default sebelum deploy ke production
+- JANGAN PERNAH gunakan kredensial default di production environment
+- Hapus atau nonaktifkan akun testing di production
 
 ---
 

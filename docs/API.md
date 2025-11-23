@@ -71,6 +71,8 @@ Halaman utama dengan informasi konser dan navigasi
 **Controller:** `UserController@login`  
 **Deskripsi:** Memproses login user
 
+**Catatan**: Endpoint ini menggunakan route `/ticket` dengan method POST untuk login, yang merupakan implementasi khusus dari aplikasi ini. Setelah login berhasil, user akan diarahkan ke halaman ticket.
+
 **Request Body:**
 ```json
 {

@@ -208,7 +208,11 @@ Username: admin
 Password: admin123
 ```
 
-**PENTING**: Segera ganti password default setelah instalasi!
+**⚠️ PERINGATAN KEAMANAN**: 
+- Kredensial ini HANYA untuk development/testing
+- WAJIB ganti password segera setelah instalasi
+- JANGAN PERNAH gunakan kredensial default di production
+- Gunakan password yang kuat (min 12 karakter, kombinasi huruf/angka/simbol)
 
 ---
 
